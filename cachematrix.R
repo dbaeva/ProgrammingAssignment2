@@ -1,8 +1,9 @@
 ## Denica Baeva R Programming Coursera Assignment Jan 2018
 
 ## This function creates a special "matrix" 
-## object that can cache its inverse using solve
-
+## object that can cache its inverse using solve cacheSolve function below
+## assumes matrix has an inverse
+## to call cache the set inverse use it with the c
 makeCacheMatrix<-function(x = matrix())
 {
   s <- NULL
@@ -35,4 +36,5 @@ cacheSolve<-function(x,...){
   data <- x$get()
   m <- solve(data, ...)
   x$setinverse(m)
+  m ##return this if not cached
 }
